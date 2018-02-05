@@ -1,5 +1,8 @@
 
-export DEEPJETCORE=../DeepJetCore
+if [ ! $DEEPJETCORE ]
+	then
+       export DEEPJETCORE=../DeepJetCore
+    fi
 
 THISDIR=`pwd`
 cd $DEEPJETCORE/

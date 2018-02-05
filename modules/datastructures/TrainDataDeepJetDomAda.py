@@ -22,9 +22,9 @@ class TrainDataDeepJetDomAda(TrainData):
         
         #setting DeepJet specific defaults
         self.treename="tree"
-        self.undefTruth=['isUndefined']
+        self.undefTruth=[]
         self.referenceclass='isB'
-        self.truthclasses=['isB','isC','isL']
+        self.truthclasses=['isB','isC','isUDSG']
         
         
         #standard branches

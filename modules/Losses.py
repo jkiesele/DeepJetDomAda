@@ -1,6 +1,6 @@
 from keras import backend as K
 
-
+global_loss_list={}
 
 def exampleLoss(y_true, x_pred):
     

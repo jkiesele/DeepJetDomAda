@@ -6,19 +6,19 @@ from keras.models import Model
 
 
 
-def mymodel(Inputs,nclasses,nregressions,dropoutRate=0.05):
+def myDomAdaptModel(Inputs,nclasses,nregclasses,dropoutRate=0.05):
     x = Dense(32, activation='relu',kernel_initializer='lecun_uniform',name='firstDense')(Inputs[0])
-    x = Dense(32, activation='softmax',kernel_initializer='lecun_uniform',name='predID')(x)
-    Model(inputs=Inputs, outputs=[x])
+    x = Dense(nclasses, activation='softmax',kernel_initializer='lecun_uniform',name='predID')(x)
+    return Model(inputs=Inputs, outputs=[x])
     
 #also does all the parsing
 train=training_base(testrun=False)
 
 
-if not train.modelSet():
-    from models import dense_model
+if  not train.modelSet():
+
     print 'Setting model'
-    train.setModel(mymodel,dropoutRate=0.1)
+    train.setModel(myDomAdaptModel,dropoutRate=0.1)
     
     train.compileModel(learningrate=0.003,
                        loss='categorical_crossentropy',

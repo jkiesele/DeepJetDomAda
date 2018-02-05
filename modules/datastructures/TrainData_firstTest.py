@@ -21,8 +21,7 @@ class TrainData_firstTest(TrainDataDeepJetDomAda):
         
         self.addBranches(['jet_pt', 'jet_eta'])
        
-        self.addBranches(['TagVarCSVTrk_trackJetDistVal'],
-                             6)
+        #self.addBranches(['track_pt'], 6)
         
         
 
