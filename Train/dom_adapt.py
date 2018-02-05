@@ -25,7 +25,7 @@ if  not train.modelSet():
                        metrics=['accuracy'])
 
 
-model,history = train.trainModel(nepochs=1, 
+model,history = train.trainModel(nepochs=10, 
                                  batchsize=5000, 
                                  stop_patience=300, 
                                  lr_factor=0.5, 

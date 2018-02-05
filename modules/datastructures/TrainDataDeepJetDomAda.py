@@ -13,7 +13,8 @@ def fileTimeOut(fileName, timeOut):
 class TrainDataDeepJetDomAda(TrainData):
     '''
     Base class for DeepJet.
-    TO create own b-tagging trainings, please inherit from this class
+    To create own b-tagging trainings, please inherit from this class.
+    Do NOT use this class directly or modify it (except it is necessary)
     '''
     
     def __init__(self):
